@@ -1,0 +1,11 @@
+step_id,agent_action,reward_score,status
+1,search,0.1,success
+2,search,0.2,success
+3,click,0.5,success
+4,scroll,0.1,timeout
+5,click,0.6,success
+6,buy,5.0,success
+7,search,0.1,fail
+8,buy,4.8,success
+9,click,0.4,success
+10,scroll,0.0,fail
