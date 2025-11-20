@@ -4,7 +4,7 @@
 
 ## 📝 The Challenge
 
-[cite_start]**Goal -** Create an async function to fetch multiple URLs concurrently[cite: 3, 4].
+**Goal -** Create an async function to fetch multiple URLs concurrently.
 
 In the world of AI Agents, waiting is the enemy. If an agent waits for one API call to finish before starting the next (synchronous execution), it becomes slow and unresponsive. This challenge focuses on using Python's `asyncio` library to perform non-blocking operations, allowing the agent to "multitask" while waiting for input/output (I/O) operations.
 
