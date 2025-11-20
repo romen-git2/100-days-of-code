@@ -57,7 +57,7 @@ The challenge is divided into 7 key phases:
 1. Clone the repo:
 
     ```bash
-    git clone [https://github.com/romen-git2/100-days-of-code.git](https://github.com/romen-git2/100-days-of-code.git)
+    git clone https://github.com/romen-git2/100-days-of-code.git
     ```
 
 2. Locate README.md of specific day for instructions:
