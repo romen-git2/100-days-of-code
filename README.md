@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-3%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-4%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -29,7 +29,7 @@ The challenge is divided into 7 key phases:
 | **01** | Async Python | Async URL Fetcher with `asyncio` | ✅ | [Code](./day1/day1.py) |
 | **02** | NumPy & Pandas | Agent Observation Data Processing | ✅ | [Code](./day2/day2.py) |
 | **03** | Visualization | Matplotlib for Agent State Logging | ✅ | [Code](./day3/day3.py) |
-| **04** | Web Scraping | Extracting Data with BeautifulSoup | ⬜ | |
+| **04** | Web Scraping | Extracting Data with BeautifulSoup | ✅ | [Code](./day4/day4.py) |
 | **05** | API Calls | Tool Integration via `requests` | ⬜ | |
 | **06** | Error Handling | Custom Exceptions & Logging | ⬜ | |
 | **07** | Parallel Processing | Dask for Agent Simulations | ⬜ | |
@@ -44,13 +44,14 @@ The challenge is divided into 7 key phases:
 * **Day 1 -** Learned that `asyncio` is critical for agents to perform non-blocking operations (like waiting for LLM tokens or API responses).
 * **Day 2 -** Realized that filtering data effectively before an agent can make decisions based on history.
 * **Day 3 -** Discovered that visualizing agent states (via Matplotlib) is essential for debugging "black box" behavior, allowing for quick identification of learning plateaus or erratic actions.
+* **Day 4 -** Understood that LLMs are "frozen in time," so mastering web scraping (BeautifulSoup) is crucial for giving agents real-time context and access to live data sources.
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib` (so far)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests` (so far)
 * **Frameworks (Upcoming) -** LangChain, AutoGen, LangGraph
 
 ## 🏃‍♂️ How to Run
@@ -68,6 +69,7 @@ The challenge is divided into 7 key phases:
     | **01** | [Code](./day1/README.md) |
     | **02** | [Code](./day2/README.md) |
     | **03** | [Code](./day3/README.md) |
+    | **04** | [Code](./day4/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
