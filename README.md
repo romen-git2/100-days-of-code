@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-4%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-5%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -30,7 +30,7 @@ The challenge is divided into 7 key phases:
 | **02** | NumPy & Pandas | Agent Observation Data Processing | ✅ | [Code](./day2/day2.py) |
 | **03** | Visualization | Matplotlib for Agent State Logging | ✅ | [Code](./day3/day3.py) |
 | **04** | Web Scraping | Extracting Data with BeautifulSoup | ✅ | [Code](./day4/day4.py) |
-| **05** | API Calls | Tool Integration via `requests` | ⬜ | |
+| **05** | API Calls | Tool Integration via `requests` | ✅ | [Code](./day5/day5.py) |
 | **06** | Error Handling | Custom Exceptions & Logging | ⬜ | |
 | **07** | Parallel Processing | Dask for Agent Simulations | ⬜ | |
 | **08** | OOP Patterns | Strategy Pattern for Decisions | ⬜ | |
@@ -45,6 +45,7 @@ The challenge is divided into 7 key phases:
 * **Day 2 -** Realized that filtering data effectively before an agent can make decisions based on history.
 * **Day 3 -** Discovered that visualizing agent states (via Matplotlib) is essential for debugging "black box" behavior, allowing for quick identification of learning plateaus or erratic actions.
 * **Day 4 -** Understood that LLMs are "frozen in time," so mastering web scraping (BeautifulSoup) is crucial for giving agents real-time context and access to live data sources.
+* **Day 5 -** Learned that unlike scraping, APIs provide structured JSON data that is safer and more reliable for agents to parse and act upon.
 
 ---
 
@@ -70,6 +71,7 @@ The challenge is divided into 7 key phases:
     | **02** | [Code](./day2/README.md) |
     | **03** | [Code](./day3/README.md) |
     | **04** | [Code](./day4/README.md) |
+    | **05** | [Code](./day5/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
