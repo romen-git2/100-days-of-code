@@ -1,0 +1,26 @@
+[
+    {
+        "sessionId": 101,
+        "timestamp": "2023-10-27 10:00:00",
+        "userQuery": "What is ETL?",
+        "responseQuality": 0.95,
+        "status": "complete",
+        "processedBy": "ETL Pipeline V1"
+    },
+    {
+        "sessionId": 102,
+        "timestamp": "2023-10-27 10:05:00",
+        "userQuery": "Define Python",
+        "responseQuality": 0.88,
+        "status": "complete",
+        "processedBy": "ETL Pipeline V1"
+    },
+    {
+        "sessionId": 104,
+        "timestamp": "2023-10-27 10:15:00",
+        "userQuery": "Calculate 5+5",
+        "responseQuality": 0.99,
+        "status": "complete",
+        "processedBy": "ETL Pipeline V1"
+    }
+]

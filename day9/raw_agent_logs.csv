@@ -1,0 +1,6 @@
+sessionId,timestamp,userQuery,responseQuality,status
+101,2023-10-27 10:00:00,What is ETL?,0.95,complete
+102,2023-10-27 10:05:00,Define Python,0.88,complete
+103,,error log,0.0,failed
+104,2023-10-27 10:15:00,Calculate 5+5,0.99,complete
+105,2023-10-27 10:20:00,Hello,0.1,timeout
