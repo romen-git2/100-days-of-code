@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-8%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-9%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -34,7 +34,7 @@ The challenge is divided into 7 key phases:
 | **06** | Error Handling | Custom Exceptions & Logging | ✅ | [Code](./day6/day6.py) |
 | **07** | Parallel Processing | Dask for Agent Simulations | ✅ | [Code](./day7/day7.py) |
 | **08** | OOP Patterns | Strategy Pattern for Decisions | ✅ | [Code](./day8/day8.py) |
-| **09** | Data Pipeline | ETL with Pandas | ⬜ | |
+| **09** | Data Pipeline | ETL with Pandas | ✅ | [Code](./day9/day9.py) |
 | **10** | Unit Testing | Pytest for Agent Components | ⬜ | |
 
 ---
@@ -49,6 +49,7 @@ The challenge is divided into 7 key phases:
 * **Day 6 -** Recognized that robust agents require custom exception handling (try-except blocks) and structured logging to survive API failures and recover without crashing.
 * **Day 7 -** Distinguished between concurrency (waiting) and parallelism (doing). Learned that parallel processing is essential for scaling agent simulations and running efficient batch evaluations across multiple CPU cores.
 * **Day 8 -** Implemented the Strategy Pattern to decouple decision logic, allowing agents to dynamically switch between different problem-solving methods (like "fast keyword search" vs. "complex reasoning") at runtime.
+* **Day 9 -** Built an ETL pipeline (Extract, Transform, Load) to sanitize messy input logs. Realized that agents need clean, structured data (like JSON records) to function reliably, reinforcing the "Garbage In, Garbage Out" principle.
 
 ---
 
@@ -78,6 +79,7 @@ The challenge is divided into 7 key phases:
     | **06** | [Code](./day6/README.md) |
     | **07** | [Code](./day7/README.md) |
     | **08** | [Code](./day8/README.md) |
+    | **09** | [Code](./day9/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
