@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-10%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-11%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -37,6 +37,31 @@ The challenge is divided into 7 key phases:
 | **09** | Data Pipeline | ETL with Pandas | ✅ | [Code](./day9/day9.py) |
 | **10** | Unit Testing | Pytest for Agent Components | ✅ | [Code](./day10/test_agent.py) |
 
+### Phase 2 - Agent Design Patterns & Integrations
+
+| Day | Topic | Challenge | Status | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **11** | Factory Pattern | Factory function to instantiate agent types | ✅ | [Code](./day11/day11.py) |
+| **12** | Singleton | Implement a singleton for config loading | ⬜ |  |
+| **13** | Observer | Set up observer for state changes | ⬜ |  |
+| **14** | Decorator | Decorate a function to add timing logs | ⬜ |  |
+| **15** | Command | Create executable command objects | ⬜ |  |
+| **16** | Adapter | Adapt a third-party API to agent interface | ⬜ |  |
+| **17** | Facade | Facade class for multiple service calls | ⬜ |  |
+| **18** | Apply patterns | Use factory, observer and decorator together | ⬜ |  |
+| **19** | Pattern toolkit | Build a module with 2-3 patterns | ⬜ |  |
+| **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ⬜ |  |
+| **21** | Webhooks | Set up a local server to receive webhook | ⬜ |  |
+| **22** | SQL storage: SQLite | Create table and insert agent states | ⬜ |  |
+| **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ |  |
+| **24** | Redis caching | Cache and retrieve a key-value pair | ⬜ |  |
+| **25** | RabbitMQ queues | Send and receive a message in a queue | ⬜ |  |
+| **26** | Integrated tool: API + DB combo | Fetch data via API and store in DB | ⬜ |  |
+| **27** | API chaining | Chain two APIs with error handling | ⬜ |  |
+| **28** | Input validation | Validate and clean agent inputs | ⬜ |  |
+| **29** | Structured logging | Log agent events to file | ⬜ |  |
+| **30** | Metrics tracking | Track and report agent uptime | ⬜ |  |
+
 ---
 
 ## 🧠 Key Learnings & Reflections
@@ -51,6 +76,7 @@ The challenge is divided into 7 key phases:
 * **Day 8 -** Implemented the Strategy Pattern to decouple decision logic, allowing agents to dynamically switch between different problem-solving methods (like "fast keyword search" vs. "complex reasoning") at runtime.
 * **Day 9 -** Built an ETL pipeline (Extract, Transform, Load) to sanitize messy input logs. Realized that agents need clean, structured data (like JSON records) to function reliably, reinforcing the "Garbage In, Garbage Out" principle.
 * **Day 10 -** Validated that while LLM outputs vary, the underlying tool logic must be deterministic. Unit testing (Pytest) prevents regressions, ensuring that changes to the agent's code don't silently break its ability to parse commands or calculate results.
+* **Day 11 -** Implemented the Factory Pattern to centralize the creation of specialized agents. Realized this pattern is crucial for multi-agent swarms, allowing a Manager agent to spawn specific sub-agents (Coder, Researcher) dynamically without knowing the complex construction details, ensuring high decoupling and scalability.
 
 ---
 
@@ -82,6 +108,7 @@ The challenge is divided into 7 key phases:
     | **08** | [Code](./day8/README.md) |
     | **09** | [Code](./day9/README.md) |
     | **10** | [Code](./day10/README.md) |
+    | **11** | [Code](./day11/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
