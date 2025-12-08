@@ -24,7 +24,7 @@ class CoderAgent(BaseAgent):
 
     def act(self, task: str):
         print(f"Writing python code for {task}")
-        return print(f"Code for {task}")
+        return f"Code for {task}"
 
 # agent factory
 class AgentFactory():
