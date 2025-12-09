@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-11%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-12%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -42,7 +42,7 @@ The challenge is divided into 7 key phases:
 | Day | Topic | Challenge | Status | Links |
 | :--- | :--- | :--- | :--- | :--- |
 | **11** | Factory Pattern | Factory function to instantiate agent types | ✅ | [Code](./day11/day11.py) |
-| **12** | Singleton | Implement a singleton for config loading | ⬜ |  |
+| **12** | Singleton | Implement a singleton for config loading | ✅ | [Code](./day12/day12.py) |
 | **13** | Observer | Set up observer for state changes | ⬜ |  |
 | **14** | Decorator | Decorate a function to add timing logs | ⬜ |  |
 | **15** | Command | Create executable command objects | ⬜ |  |
@@ -77,6 +77,7 @@ The challenge is divided into 7 key phases:
 * **Day 9 -** Built an ETL pipeline (Extract, Transform, Load) to sanitize messy input logs. Realized that agents need clean, structured data (like JSON records) to function reliably, reinforcing the "Garbage In, Garbage Out" principle.
 * **Day 10 -** Validated that while LLM outputs vary, the underlying tool logic must be deterministic. Unit testing (Pytest) prevents regressions, ensuring that changes to the agent's code don't silently break its ability to parse commands or calculate results.
 * **Day 11 -** Implemented the Factory Pattern to centralize the creation of specialized agents. Realized this pattern is crucial for multi-agent swarms, allowing a Manager agent to spawn specific sub-agents (Coder, Researcher) dynamically without knowing the complex construction details, ensuring high decoupling and scalability.
+* **Day 12 -** Applied the Singleton Pattern to manage shared resources like configuration loaders. Understood that for heavy resources (database pools, global configs), enforcing a single instance prevents memory waste and synchronization errors in a multi-agent system.
 
 ---
 
@@ -109,6 +110,7 @@ The challenge is divided into 7 key phases:
     | **09** | [Code](./day9/README.md) |
     | **10** | [Code](./day10/README.md) |
     | **11** | [Code](./day11/README.md) |
+    | **12** | [Code](./day12/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
