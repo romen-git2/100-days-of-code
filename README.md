@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-15%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-16%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -46,7 +46,7 @@ The challenge is divided into 7 key phases:
 | **13** | Observer | Set up observer for state changes | ✅ | [Code](./day13/day13.py) |
 | **14** | Decorator | Decorate a function to add timing logs | ✅ | [Code](./day14/day14.py) |
 | **15** | Command | Create executable command objects | ✅ | [Code](./day15/day15.py) |
-| **16** | Adapter | Adapt a third-party API to agent interface | ⬜ | |
+| **16** | Adapter | Adapt a third-party API to agent interface | ✅ | [Code](./day16/day16.py) |
 | **17** | Facade | Facade class for multiple service calls | ⬜ | |
 | **18** | Apply patterns | Use factory, observer and decorator together | ⬜ | |
 | **19** | Pattern toolkit | Build a module with 2-3 patterns | ⬜ | |
@@ -81,6 +81,7 @@ The challenge is divided into 7 key phases:
 * **Day 13 -** Implemented the Observer Pattern to enable real-time event broadcasting. By decoupling the agent (Subject) from its listeners (Loggers, Alerts), established an Event-Driven Architecture where the agent can simply "notify" changes without caring who is listening or how they handle the data.
 * **Day 14 -** Mastered the Decorator Pattern to inject "middleware" logic (like timing, logging or retries) into agent functions. This allows for cleaner code by keeping business logic separate from operational concerns and enabling reusable behaviors across different tools.
 * **Day 15 -** Implemented the Command Pattern to encapsulate agent actions as objects. This decoupling allows the agent to separate planning (building a queue of commands) from execution, enabling features like task batching, undo capability and clear audit logs for complex reasoning chains.
+* **Day 16 -** Applied the Adapter Pattern to bridge the gap between agent's standard interface and incompatible third-party APIs. This allows the agent to utilize a diverse range of external tools (like legacy weather services) without cluttering the core logic with messy translation code.
 
 ---
 
@@ -117,6 +118,7 @@ The challenge is divided into 7 key phases:
     | **13** | [Code](./day13/README.md) |
     | **14** | [Code](./day14/README.md) |
     | **15** | [Code](./day15/README.md) |
+    | **16** | [Code](./day16/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
