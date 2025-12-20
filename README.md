@@ -46,21 +46,21 @@ The challenge is divided into 7 key phases:
 | **13** | Observer | Set up observer for state changes | ✅ | [Code](./day13/day13.py) |
 | **14** | Decorator | Decorate a function to add timing logs | ✅ | [Code](./day14/day14.py) |
 | **15** | Command | Create executable command objects | ✅ | [Code](./day15/day15.py) |
-| **16** | Adapter | Adapt a third-party API to agent interface | ⬜ |  |
-| **17** | Facade | Facade class for multiple service calls | ⬜ |  |
-| **18** | Apply patterns | Use factory, observer and decorator together | ⬜ |  |
-| **19** | Pattern toolkit | Build a module with 2-3 patterns | ⬜ |  |
-| **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ⬜ |  |
-| **21** | Webhooks | Set up a local server to receive webhook | ⬜ |  |
-| **22** | SQL storage: SQLite | Create table and insert agent states | ⬜ |  |
-| **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ |  |
-| **24** | Redis caching | Cache and retrieve a key-value pair | ⬜ |  |
-| **25** | RabbitMQ queues | Send and receive a message in a queue | ⬜ |  |
-| **26** | Integrated tool: API + DB combo | Fetch data via API and store in DB | ⬜ |  |
-| **27** | API chaining | Chain two APIs with error handling | ⬜ |  |
-| **28** | Input validation | Validate and clean agent inputs | ⬜ |  |
-| **29** | Structured logging | Log agent events to file | ⬜ |  |
-| **30** | Metrics tracking | Track and report agent uptime | ⬜ |  |
+| **16** | Adapter | Adapt a third-party API to agent interface | ⬜ | |
+| **17** | Facade | Facade class for multiple service calls | ⬜ | |
+| **18** | Apply patterns | Use factory, observer and decorator together | ⬜ | |
+| **19** | Pattern toolkit | Build a module with 2-3 patterns | ⬜ | |
+| **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ⬜ | |
+| **21** | Webhooks | Set up a local server to receive webhook | ⬜ | |
+| **22** | SQL storage: SQLite | Create table and insert agent states | ⬜ | |
+| **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ | |
+| **24** | Redis caching | Cache and retrieve a key-value pair | ⬜ | |
+| **25** | RabbitMQ queues | Send and receive a message in a queue | ⬜ | |
+| **26** | Integrated tool: API + DB combo | Fetch data via API and store in DB | ⬜ | |
+| **27** | API chaining | Chain two APIs with error handling | ⬜ | |
+| **28** | Input validation | Validate and clean agent inputs | ⬜ | |
+| **29** | Structured logging | Log agent events to file | ⬜ | |
+| **30** | Metrics tracking | Track and report agent uptime | ⬜ | |
 
 ---
 
