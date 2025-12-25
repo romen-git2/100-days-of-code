@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-17%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-18%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -48,7 +48,7 @@ The challenge is divided into 7 key phases:
 | **15** | Command | Create executable command objects | ✅ | [Code](./day15/day15.py) |
 | **16** | Adapter | Adapt a third-party API to agent interface | ✅ | [Code](./day16/day16.py) |
 | **17** | Facade | Facade class for multiple service calls | ✅ | [Code](./day17/day17.py) |
-| **18** | Apply patterns | Use factory, observer and decorator together | ⬜ | |
+| **18** | Apply patterns | Use factory, observer and decorator together | ✅ | [Code](./day18/day18.py) |
 | **19** | Pattern toolkit | Build a module with 2-3 patterns | ⬜ | |
 | **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ⬜ | |
 | **21** | Webhooks | Set up a local server to receive webhook | ⬜ | |
@@ -83,6 +83,7 @@ The challenge is divided into 7 key phases:
 * **Day 15 -** Implemented the Command Pattern to encapsulate agent actions as objects. This decoupling allows the agent to separate planning (building a queue of commands) from execution, enabling features like task batching, undo capability and clear audit logs for complex reasoning chains.
 * **Day 16 -** Applied the Adapter Pattern to bridge the gap between agent's standard interface and incompatible third-party APIs. This allows the agent to utilize a diverse range of external tools (like legacy weather services) without cluttering the core logic with messy translation code.
 * **Day 17 -** Implemented the Facade Pattern to simplify complex subsystem interactions. By hiding the intricate details of multiple tools (like initializing databases, authenticating and logging) behind a single front door interface, the agent can focus on high-level goals without getting bogged down in low-level configuration.
+* **Day 18 -** Successfully integrated the Factory, Observer and Decorator patterns into a unified sensor monitoring system. This demonstrated the synergy of design patterns - the Factory handled object creation, the Decorator managed logging (cross-cutting concerns) and the Observer handled real-time alerts, resulting in a highly decoupled and scalable architecture.
 
 ---
 
@@ -121,6 +122,7 @@ The challenge is divided into 7 key phases:
     | **15** | [Code](./day15/README.md) |
     | **16** | [Code](./day16/README.md) |
     | **17** | [Code](./day17/README.md) |
+    | **18** | [Code](./day18/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
