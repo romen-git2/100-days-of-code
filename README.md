@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-19%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-20%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -50,7 +50,7 @@ The challenge is divided into 7 key phases:
 | **17** | Facade | Facade class for multiple service calls | ✅ | [Code](./day17/day17.py) |
 | **18** | Apply patterns | Use factory, observer and decorator together | ✅ | [Code](./day18/day18.py) |
 | **19** | Pattern toolkit | Build a module with 2-3 patterns | ✅ | [Code](./day19/day19.py) |
-| **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ⬜ | |
+| **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ✅ | [Code](./day20/day20.py) |
 | **21** | Webhooks | Set up a local server to receive webhook | ⬜ | |
 | **22** | SQL storage: SQLite | Create table and insert agent states | ⬜ | |
 | **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ | |
@@ -85,13 +85,14 @@ The challenge is divided into 7 key phases:
 * **Day 17 -** Implemented the Facade Pattern to simplify complex subsystem interactions. By hiding the intricate details of multiple tools (like initializing databases, authenticating and logging) behind a single front door interface, the agent can focus on high-level goals without getting bogged down in low-level configuration.
 * **Day 18 -** Successfully integrated the Factory, Observer and Decorator patterns into a unified sensor monitoring system. This demonstrated the synergy of design patterns - the Factory handled object creation, the Decorator managed logging (cross-cutting concerns) and the Observer handled real-time alerts, resulting in a highly decoupled and scalable architecture.
 * **Day 19 -** Transitioned from scripting to library building by creating a reusable Pattern Toolkit. Learned the importance of modularizing code into logical components (Creation vs. Behavior) and using `__init__.py` to manage a clean public API. This shift toward Code as Infrastructure ensures that future agent projects can import robust, pre-tested design patterns rather than reinventing them, mirroring the architecture of major frameworks like LangChain.
+* **Day 20 -** Integrated a real-world OAuth 2.0 Client Credentials Flow using the Spotify Web API. Mastered the process of exchanging Base64-encoded credentials for a temporary Bearer Token and implemented a proactive refresh mechanism. This taught me that an agent's autonomy depends heavily on its ability to manage its own authentication lifecycle detecting expiration and handling 401 Unauthorized errors without manual intervention.
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest` (so far)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv` (so far)
 * **Frameworks (Upcoming) -** LangChain, AutoGen, LangGraph
 
 ## 🏃‍♂️ How to Run
@@ -125,6 +126,7 @@ The challenge is divided into 7 key phases:
     | **17** | [Code](./day17/README.md) |
     | **18** | [Code](./day18/README.md) |
     | **19** | [Code](./day19/README.md) |
+    | **20** | [Code](./day20/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
