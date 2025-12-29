@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-21%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-22%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -52,7 +52,7 @@ The challenge is divided into 7 key phases:
 | **19** | Pattern toolkit | Build a module with 2-3 patterns | ✅ | [Code](./day19/day19.py) |
 | **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ✅ | [Code](./day20/day20.py) |
 | **21** | Webhooks | Set up a local server to receive webhook | ✅ | [Code](./day21/day21.py) |
-| **22** | SQL storage: SQLite | Create table and insert agent states | ⬜ | |
+| **22** | SQL storage: SQLite | Create table and insert agent states | ✅ | [Code](./day22/day22.py) |
 | **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ | |
 | **24** | Redis caching | Cache and retrieve a key-value pair | ⬜ | |
 | **25** | RabbitMQ queues | Send and receive a message in a queue | ⬜ | |
@@ -87,6 +87,7 @@ The challenge is divided into 7 key phases:
 * **Day 19 -** Transitioned from scripting to library building by creating a reusable Pattern Toolkit. Learned the importance of modularizing code into logical components (Creation vs. Behavior) and using `__init__.py` to manage a clean public API. This shift toward Code as Infrastructure ensures that future agent projects can import robust, pre-tested design patterns rather than reinventing them, mirroring the architecture of major frameworks like LangChain.
 * **Day 20 -** Integrated a real-world OAuth 2.0 Client Credentials Flow using the Spotify Web API. Mastered the process of exchanging Base64-encoded credentials for a temporary Bearer Token and implemented a proactive refresh mechanism. This taught me that an agent's autonomy depends heavily on its ability to manage its own authentication lifecycle detecting expiration and handling 401 Unauthorized errors without manual intervention.
 * **Day 21 -** Shifted from Polling (Pull) to Webhooks (Push) architecture by building a local HTTP server with Flask. Used Localtunnel to bridge the gap between local machine and the public internet, allowing the agent to receive real-time signals from external sources. I learned that event-driven agents are significantly more resource-efficient, as they remain idle until a specific payload is pushed to their endpoint, a critical design pattern for scaling real-time AI systems like notification bots or automated support agents.
+* **Day 22 -** Implemented Persistent Memory for the agent using SQLite. Moved from storing state in volatile RAM (variables) to a file based database on disk. This allows the agent to survive restarts and crashes without losing its history. Learned to design a schema for Agent Activity Logs (timestamp, action, result) and reinforced the importance of ACID compliance for data integrity in long running autonomous systems.
 
 ---
 
@@ -129,6 +130,7 @@ The challenge is divided into 7 key phases:
     | **19** | [Code](./day19/README.md) |
     | **20** | [Code](./day20/README.md) |
     | **21** | [Code](./day21/README.md) |
+    | **22** | [Code](./day22/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
