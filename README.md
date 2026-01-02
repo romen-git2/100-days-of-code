@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-22%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-23%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -53,7 +53,7 @@ The challenge is divided into 7 key phases:
 | **20** | OAuth integration | Authenticate and call a OAuth-protected endpoint | ✅ | [Code](./day20/day20.py) |
 | **21** | Webhooks | Set up a local server to receive webhook | ✅ | [Code](./day21/day21.py) |
 | **22** | SQL storage: SQLite | Create table and insert agent states | ✅ | [Code](./day22/day22.py) |
-| **23** | MongoDB | Insert and query JSON-like agent logs | ⬜ | |
+| **23** | MongoDB | Insert and query JSON-like agent logs | ✅ | [Code](./day23/day23.py) |
 | **24** | Redis caching | Cache and retrieve a key-value pair | ⬜ | |
 | **25** | RabbitMQ queues | Send and receive a message in a queue | ⬜ | |
 | **26** | Integrated tool: API + DB combo | Fetch data via API and store in DB | ⬜ | |
@@ -88,13 +88,14 @@ The challenge is divided into 7 key phases:
 * **Day 20 -** Integrated a real-world OAuth 2.0 Client Credentials Flow using the Spotify Web API. Mastered the process of exchanging Base64-encoded credentials for a temporary Bearer Token and implemented a proactive refresh mechanism. This taught me that an agent's autonomy depends heavily on its ability to manage its own authentication lifecycle detecting expiration and handling 401 Unauthorized errors without manual intervention.
 * **Day 21 -** Shifted from Polling (Pull) to Webhooks (Push) architecture by building a local HTTP server with Flask. Used Localtunnel to bridge the gap between local machine and the public internet, allowing the agent to receive real-time signals from external sources. I learned that event-driven agents are significantly more resource-efficient, as they remain idle until a specific payload is pushed to their endpoint, a critical design pattern for scaling real-time AI systems like notification bots or automated support agents.
 * **Day 22 -** Implemented Persistent Memory for the agent using SQLite. Moved from storing state in volatile RAM (variables) to a file based database on disk. This allows the agent to survive restarts and crashes without losing its history. Learned to design a schema for Agent Activity Logs (timestamp, action, result) and reinforced the importance of ACID compliance for data integrity in long running autonomous systems.
+* **Day 23 -** Integrated NoSQL storage with MongoDB to handle unstructured agent data. Unlike SQLite's rigid tables, MongoDB's flexible Document Store model is perfect for saving messy, nested JSON outputs typical of LLMs (like reasoning chains or multi-step plans). This Schema-less approach allows the agent's memory to evolve dynamically without needing complex database migrations every time adding a new data field.
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv` (so far)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo` (so far)
 * **Frameworks -** Flask, LangChain(Upcoming), AutoGen(Upcoming), LangGraph(Upcoming)
 
 ## 🏃‍♂️ How to Run
@@ -131,6 +132,7 @@ The challenge is divided into 7 key phases:
     | **20** | [Code](./day20/README.md) |
     | **21** | [Code](./day21/README.md) |
     | **22** | [Code](./day22/README.md) |
+    | **23** | [Code](./day23/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
