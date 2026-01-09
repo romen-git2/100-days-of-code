@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-26%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-27%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -57,7 +57,7 @@ The challenge is divided into 7 key phases:
 | **24** | Redis caching | Cache and retrieve a key-value pair | ✅ | [Code](./day24/day24.py) |
 | **25** | RabbitMQ queues | Send and receive a message in a queue | ✅ | [Code](./day25/producer.py) |
 | **26** | Integrated tool: API + DB combo | Fetch data via API and store in DB | ✅ | [Code](./day26/day26.py) |
-| **27** | API chaining | Chain two APIs with error handling | ⬜ | |
+| **27** | API chaining | Chain two APIs with error handling | ✅ | [Code](./day27/day27.py) |
 | **28** | Input validation | Validate and clean agent inputs | ⬜ | |
 | **29** | Structured logging | Log agent events to file | ⬜ | |
 | **30** | Metrics tracking | Track and report agent uptime | ⬜ | |
@@ -92,6 +92,7 @@ The challenge is divided into 7 key phases:
 * **Day 24 -** Implemented high speed caching using Redis to optimize agent performance. By storing expensive API responses in RAM, reducing data retrieval time from seconds(network latency) to microseconds. Learned the Cache-Aside Pattern and the importance of TTL (Time-To-Live) to ensure the agent doesn't act on stale data, significantly cutting down on redundant API costs and wait times.
 * **Day 25 -** Mastered Asynchronous Messaging by implementing a distributed task queue with RabbitMQ. I transitioned from a monolithic script to a Producer-Consumer architecture, allowing a Manager agent to dispatch heavy web scraping jobs without blocking its own execution. Learned the importance of Message Acknowledgments(ACK) for fault tolerance and realized how queues enable horizontal scaling allowing multiple worker agents to pull from the same queue to process tasks in parallel.
 * **Day 26 -** Built a Full Cycle Agent Tool that integrates API fetching, data processing and database persistence into a single workflow. I implemented the Service-Repository Pattern to cleanly separate network logic(Service) from storage logic(Repository). A critical takeaway was using the Upsert Strategy(ON CONFLICT DO UPDATE) in SQL, ensuring the agent can run repeatedly without crashing or corrupting data, a fundamental requirement for autonomous systems.
+* **Day 27 -** Moving from isolated tool use to sequential workflow orchestration. By linking the output of a User Profile API(source) to a Real-time Weather API(enrichment), I implemented a deterministic handover process. This taught me the importance of Data Transformation—acting as the middleman to convert incompatible data types (like string coordinates to floats)—and Fail-Fast Error Handling, ensuring the chain terminates safely if a primary dependency is missing. This architecture is the backbone of Reasoning agents that must investigate and synthesize information from multiple sources to solve a single query.
 
 ---
 
@@ -139,6 +140,7 @@ The challenge is divided into 7 key phases:
     | **24** | [Code](./day24/README.md) |
     | **25** | [Code](./day25/README.md) |
     | **26** | [Code](./day26/README.md) |
+    | **27** | [Code](./day27/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
