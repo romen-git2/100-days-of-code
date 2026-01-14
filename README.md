@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-29%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-30%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -60,7 +60,7 @@ The challenge is divided into 7 key phases:
 | **27** | API chaining | Chain two APIs with error handling | ✅ | [Code](./day27/day27.py) |
 | **28** | Input validation | Validate and clean agent inputs | ✅ | [Code](./day28/day28.py) |
 | **29** | Structured logging | Log agent events to file | ✅ | [Code](./day29/day29.py) |
-| **30** | Metrics tracking | Track and report agent uptime | ⬜ | |
+| **30** | Metrics tracking | Track and report agent uptime | ✅ | [Code](./day30/day30.py) |
 
 ---
 
@@ -95,6 +95,7 @@ The challenge is divided into 7 key phases:
 * **Day 27 -** Moving from isolated tool use to sequential workflow orchestration. By linking the output of a User Profile API(source) to a Real-time Weather API(enrichment), I implemented a deterministic handover process. This taught me the importance of Data Transformation—acting as the middleman to convert incompatible data types (like string coordinates to floats)—and Fail-Fast Error Handling, ensuring the chain terminates safely if a primary dependency is missing. This architecture is the backbone of Reasoning agents that must investigate and synthesize information from multiple sources to solve a single query.
 * **Day 28 -** Implemented a strict Data Validation and Sanitization layer using Pydantic V2. By creating a Data Guardian for real-time API feeds, I moved from fragile dictionary parsing to a robust Schema-First approach. Leveraged Type Coercion(auto-converting strings to floats) and Custom Field Validators to sanitize messy external data such as automatically prepending protocols to URLs. In agentic systems, Fail-Fast validation is the ultimate defense against "Garbage In, Garbage Out" ensuring that downstream logic only ever interacts with clean, verified and physically logical data.
 * **Day 29 -** Transitioned to Structured JSON Logging, establishing production grade observability for agentic workflows. By implementing a custom JSONFormatter and a trace_id system using UUIDs, I enabled the ability to track an agent's Flight Path across multiple distributed events. Logging should not just be text but Data capturing real-time metrics like latency_ms and status_codes in a machine readable format. This shift is critical for debugging complex multi-agent systems, allowing logs to be ingested by aggregators(like ELK or Datadog) to create performance dashboards and trigger automated alerts based on structured failure patterns.
+* **Day 30 -** Mastered Metrics Tracking and Health Monitoring, the final pillar of agent reliability. While logging(Day 29) captures discrete events, metrics are essential for identifying silent degradations, where an agent is running but performing poorly. I built a live Watchdog agent that calculates real-time SRE Golden Signals(Latency, Success Rate and Jitter) from network pings. By implementing automated threshold logic, I enabled the agent to self diagnose its own state (Healthy vs. Degraded), allowing for proactive alerting. This concludes Phase 2, moving from isolated tools to a fully observable, self-aware agent architecture.
 
 ---
 
@@ -145,6 +146,7 @@ The challenge is divided into 7 key phases:
     | **27** | [Code](./day27/README.md) |
     | **28** | [Code](./day28/README.md) |
     | **29** | [Code](./day29/README.md) |
+    | **30** | [Code](./day30/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
