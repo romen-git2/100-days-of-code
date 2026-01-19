@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-30%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-31%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -62,6 +62,31 @@ The challenge is divided into 7 key phases:
 | **29** | Structured logging | Log agent events to file | ✅ | [Code](./day29/day29.py) |
 | **30** | Metrics tracking | Track and report agent uptime | ✅ | [Code](./day30/day30.py) |
 
+### Phase 3 - Agent Frameworks Foundations
+
+| Day | Topic | Challenge | Status | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **31** | LangChain Components | Set up a basic LLM call with LCEL | ✅ | [Code](./day31/day31.py) |
+| **32** | Simple Chains | Chain two prompts for Q&A (Prompt Chaining) | ⬜ | |
+| **33** | Prompt Templating | Create a template with user input variables | ⬜ | |
+| **34** | Output Parsing | Parse JSON from LLM output into Python objects | ⬜ | |
+| **35** | Custom Tools | Define a calculator tool as a custom function | ⬜ | |
+| **36** | ReAct Agent | Build an agent that answers using a tool (Reasoning + Action) | ⬜ | |
+| **37** | Conversation Memory | Maintain a 3-turn chat history using Buffer Memory | ⬜ | |
+| **38** | RAG Setup | Index a text file into a Vector Store (Document Indexing) | ⬜ | |
+| **39** | Retrieval Query | Perform a similarity search on indexed docs | ⬜ | |
+| **40** | Embeddings | Embed and compare two texts using pre-built models | ⬜ | |
+| **41** | Prompt Tuning | Improve output using Few-Shot examples | ⬜ | |
+| **42** | Sequential Workflows | Build a 3-step runnable workflow using LCEL | ⬜ | |
+| **43** | Simple Agents | Build 3 variants: Zero-shot, Tool-using, and Memory agent | ⬜ | |
+| **44** | Chain Tracing | Trace a chain execution using LangSmith basics | ⬜ | |
+| **45** | Basic Assistant | Deploy a local Q&A assistant script | ⬜ | |
+| **46** | AutoGen Agents | Create a single agent using AutoGen basic setup | ⬜ | |
+| **47** | Multi-turn Convo | Simulate a back-and-forth dialogue in AutoGen | ⬜ | |
+| **48** | Group Chat | Coordinate a simple task between 2 agents | ⬜ | |
+| **49** | Role Definition | Assign custom personas/roles to agents | ⬜ | |
+| **50** | API in AutoGen | Agent calls an external API within the AutoGen framework | ⬜ | |
+
 ---
 
 ## 🧠 Key Learnings & Reflections
@@ -96,14 +121,15 @@ The challenge is divided into 7 key phases:
 * **Day 28 -** Implemented a strict Data Validation and Sanitization layer using Pydantic V2. By creating a Data Guardian for real-time API feeds, I moved from fragile dictionary parsing to a robust Schema-First approach. Leveraged Type Coercion(auto-converting strings to floats) and Custom Field Validators to sanitize messy external data such as automatically prepending protocols to URLs. In agentic systems, Fail-Fast validation is the ultimate defense against "Garbage In, Garbage Out" ensuring that downstream logic only ever interacts with clean, verified and physically logical data.
 * **Day 29 -** Transitioned to Structured JSON Logging, establishing production grade observability for agentic workflows. By implementing a custom JSONFormatter and a trace_id system using UUIDs, I enabled the ability to track an agent's Flight Path across multiple distributed events. Logging should not just be text but Data capturing real-time metrics like latency_ms and status_codes in a machine readable format. This shift is critical for debugging complex multi-agent systems, allowing logs to be ingested by aggregators(like ELK or Datadog) to create performance dashboards and trigger automated alerts based on structured failure patterns.
 * **Day 30 -** Mastered Metrics Tracking and Health Monitoring, the final pillar of agent reliability. While logging(Day 29) captures discrete events, metrics are essential for identifying silent degradations, where an agent is running but performing poorly. I built a live Watchdog agent that calculates real-time SRE Golden Signals(Latency, Success Rate and Jitter) from network pings. By implementing automated threshold logic, I enabled the agent to self diagnose its own state (Healthy vs. Degraded), allowing for proactive alerting. This concludes Phase 2, moving from isolated tools to a fully observable, self-aware agent architecture.
+* **Day 31 -** Entered the LangChain era by building LCEL (LangChain Expression Language) pipeline. By abstracting "Prompt -> Model -> Parser" flow into a declarative chain (chain = prompt | model | parser), we can build AI applications that are modular and model-agnostic.
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic` (so far)
-* **Frameworks -** Flask, LangChain(Upcoming), AutoGen(Upcoming), LangGraph(Upcoming)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic`, `langchain-google-genai` (so far)
+* **Frameworks -** Flask, LangChain, AutoGen(Upcoming), LangGraph(Upcoming)
 
 ## 🏃‍♂️ How to Run
 
@@ -147,6 +173,7 @@ The challenge is divided into 7 key phases:
     | **28** | [Code](./day28/README.md) |
     | **29** | [Code](./day29/README.md) |
     | **30** | [Code](./day30/README.md) |
+    | **31** | [Code](./day31/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
