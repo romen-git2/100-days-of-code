@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-31%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-32%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -67,7 +67,7 @@ The challenge is divided into 7 key phases:
 | Day | Topic | Challenge | Status | Links |
 | :--- | :--- | :--- | :--- | :--- |
 | **31** | LangChain Components | Set up a basic LLM call with LCEL | ✅ | [Code](./day31/day31.py) |
-| **32** | Simple Chains | Chain two prompts for Q&A (Prompt Chaining) | ⬜ | |
+| **32** | Simple Chains | Chain two prompts for Q&A (Prompt Chaining) | ✅ | [Code](./day32/day32.py) |
 | **33** | Prompt Templating | Create a template with user input variables | ⬜ | |
 | **34** | Output Parsing | Parse JSON from LLM output into Python objects | ⬜ | |
 | **35** | Custom Tools | Define a calculator tool as a custom function | ⬜ | |
@@ -122,6 +122,7 @@ The challenge is divided into 7 key phases:
 * **Day 29 -** Transitioned to Structured JSON Logging, establishing production grade observability for agentic workflows. By implementing a custom JSONFormatter and a trace_id system using UUIDs, I enabled the ability to track an agent's Flight Path across multiple distributed events. Logging should not just be text but Data capturing real-time metrics like latency_ms and status_codes in a machine readable format. This shift is critical for debugging complex multi-agent systems, allowing logs to be ingested by aggregators(like ELK or Datadog) to create performance dashboards and trigger automated alerts based on structured failure patterns.
 * **Day 30 -** Mastered Metrics Tracking and Health Monitoring, the final pillar of agent reliability. While logging(Day 29) captures discrete events, metrics are essential for identifying silent degradations, where an agent is running but performing poorly. I built a live Watchdog agent that calculates real-time SRE Golden Signals(Latency, Success Rate and Jitter) from network pings. By implementing automated threshold logic, I enabled the agent to self diagnose its own state (Healthy vs. Degraded), allowing for proactive alerting. This concludes Phase 2, moving from isolated tools to a fully observable, self-aware agent architecture.
 * **Day 31 -** Entered the LangChain era by building LCEL (LangChain Expression Language) pipeline. By abstracting "Prompt -> Model -> Parser" flow into a declarative chain (chain = prompt | model | parser), we can build AI applications that are modular and model-agnostic.
+* **Day 32 -** Mastered Sequential Prompt Chaining by building a multi-step pipeline where the output of one LLM call serves as the input for the next. I discovered that decomposing complex tasks such as technical research followed by persona based simplification leads to significantly higher accuracy and better tone control compared to a single mega prompt. By using the Gemini 2.5 Flash model, I implemented a high speed workflow optimized for the reasoning and thinking required in agentic use cases.
 
 ---
 
@@ -174,6 +175,7 @@ The challenge is divided into 7 key phases:
     | **29** | [Code](./day29/README.md) |
     | **30** | [Code](./day30/README.md) |
     | **31** | [Code](./day31/README.md) |
+    | **32** | [Code](./day32/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
