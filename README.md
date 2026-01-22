@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-32%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-33%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -68,7 +68,7 @@ The challenge is divided into 7 key phases:
 | :--- | :--- | :--- | :--- | :--- |
 | **31** | LangChain Components | Set up a basic LLM call with LCEL | ✅ | [Code](./day31/day31.py) |
 | **32** | Simple Chains | Chain two prompts for Q&A (Prompt Chaining) | ✅ | [Code](./day32/day32.py) |
-| **33** | Prompt Templating | Create a template with user input variables | ⬜ | |
+| **33** | Prompt Templating | Create a template with user input variables | ✅ | [Code](./day33/day33.py) |
 | **34** | Output Parsing | Parse JSON from LLM output into Python objects | ⬜ | |
 | **35** | Custom Tools | Define a calculator tool as a custom function | ⬜ | |
 | **36** | ReAct Agent | Build an agent that answers using a tool (Reasoning + Action) | ⬜ | |
@@ -123,6 +123,7 @@ The challenge is divided into 7 key phases:
 * **Day 30 -** Mastered Metrics Tracking and Health Monitoring, the final pillar of agent reliability. While logging(Day 29) captures discrete events, metrics are essential for identifying silent degradations, where an agent is running but performing poorly. I built a live Watchdog agent that calculates real-time SRE Golden Signals(Latency, Success Rate and Jitter) from network pings. By implementing automated threshold logic, I enabled the agent to self diagnose its own state (Healthy vs. Degraded), allowing for proactive alerting. This concludes Phase 2, moving from isolated tools to a fully observable, self-aware agent architecture.
 * **Day 31 -** Entered the LangChain era by building LCEL (LangChain Expression Language) pipeline. By abstracting "Prompt -> Model -> Parser" flow into a declarative chain (chain = prompt | model | parser), we can build AI applications that are modular and model-agnostic.
 * **Day 32 -** Mastered Sequential Prompt Chaining by building a multi-step pipeline where the output of one LLM call serves as the input for the next. I discovered that decomposing complex tasks such as technical research followed by persona based simplification leads to significantly higher accuracy and better tone control compared to a single mega prompt. By using the Gemini 2.5 Flash model, I implemented a high speed workflow optimized for the reasoning and thinking required in agentic use cases.
+* **Day 33 -** Mastered Dynamic Prompt Templating. I transitioned from brittle string concatenation to LangChain's ChatPromptTemplate, building a reusable, context aware email generator. A major takeaway was learning to separate Instructions (System Message) from Data (User Input). By programmatically injecting variables like datetime.date.today(), I ensured the agent produces production-ready output without manual placeholders like [Date], a critical step for building autonomous, end-to-end workflows.
 
 ---
 
@@ -176,6 +177,7 @@ The challenge is divided into 7 key phases:
     | **30** | [Code](./day30/README.md) |
     | **31** | [Code](./day31/README.md) |
     | **32** | [Code](./day32/README.md) |
+    | **33** | [Code](./day33/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
