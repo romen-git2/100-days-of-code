@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-34%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-35%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -70,7 +70,7 @@ The challenge is divided into 7 key phases:
 | **32** | Simple Chains | Chain two prompts for Q&A (Prompt Chaining) | ✅ | [Code](./day32/day32.py) |
 | **33** | Prompt Templating | Create a template with user input variables | ✅ | [Code](./day33/day33.py) |
 | **34** | Output Parsing | Parse JSON from LLM output into Python objects | ✅ | [Code](./day34/day34.py) |
-| **35** | Custom Tools | Define a calculator tool as a custom function | ⬜ | |
+| **35** | Custom Tools | Define a calculator tool as a custom function | ✅ | [Code](./day35/day35.py) |
 | **36** | ReAct Agent | Build an agent that answers using a tool (Reasoning + Action) | ⬜ | |
 | **37** | Conversation Memory | Maintain a 3-turn chat history using Buffer Memory | ⬜ | |
 | **38** | RAG Setup | Index a text file into a Vector Store (Document Indexing) | ⬜ | |
@@ -125,6 +125,7 @@ The challenge is divided into 7 key phases:
 * **Day 32 -** Mastered Sequential Prompt Chaining by building a multi-step pipeline where the output of one LLM call serves as the input for the next. I discovered that decomposing complex tasks such as technical research followed by persona based simplification leads to significantly higher accuracy and better tone control compared to a single mega prompt. By using the Gemini 2.5 Flash model, I implemented a high speed workflow optimized for the reasoning and thinking required in agentic use cases.
 * **Day 33 -** Mastered Dynamic Prompt Templating. I transitioned from brittle string concatenation to LangChain's ChatPromptTemplate, building a reusable, context aware email generator. A major takeaway was learning to separate Instructions (System Message) from Data (User Input). By programmatically injecting variables like datetime.date.today(), I ensured the agent produces production-ready output without manual placeholders like [Date], a critical step for building autonomous, end-to-end workflows.
 * **Day 34 -** Solved the "Text vs. Data" conflict by implementing Structured Output Parsing. By utilizing JsonOutputParser and Pydantic schemas, I forced the LLM to return valid JSON objects instead of conversational prose. I learned that defining a schema acts as a Contract for the agent, by setting `temperature=0.0`, the model shifts from creative generation to deterministic extraction. This is the fundamental bridge that allows AI agents to communicate with databases, external APIs and frontend UIs reliably.
+* **Day 35 -** Transitioned from "AI that talks" to "**AI that acts**" by implementing **Custom Tools (Function Calling)**. I learned that a Tool is essentially a Python function wrapped in a `@tool` decorator, where the docstring serves as the instruction manual for the LLM. I mastered the **Execution Round-Trip** - The AI identifies a need, generates a structured tool call, the system executes the Python logic and the result is fed back via a `ToolMessage`. This architecture allows the agent to delegate precise tasks to deterministic code, eliminating LLM hallucinations in technical domains.
 
 ---
 
@@ -180,6 +181,7 @@ The challenge is divided into 7 key phases:
     | **32** | [Code](./day32/README.md) |
     | **33** | [Code](./day33/README.md) |
     | **34** | [Code](./day34/README.md) |
+    | **35** | [Code](./day35/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
