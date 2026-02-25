@@ -1,0 +1,6 @@
+
+Welcome to NexusCorp! Here are our core policies:
+1. Remote Work: Employees can work remotely up to 3 days a week. Tuesdays and Thursdays are mandatory in-office days.
+2. Vacation Policy: All full-time employees receive 20 days of paid time off (PTO) per year, rolling over a maximum of 5 days to the next year.
+3. Equipment: The company provides a MacBook Pro, a $500 home office stipend, and covers monthly internet bills up to $50.
+4. Security: Never share your VPN credentials. Passwords must be rotated every 90 days.
