@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-37%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-38%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -73,7 +73,7 @@ The challenge is divided into 7 key phases:
 | **35** | Custom Tools | Define a calculator tool as a custom function | ✅ | [Code](./day35/day35.py) |
 | **36** | ReAct Agent | Build an agent that answers using a tool (Reasoning + Action) | ✅ | [Code](./day36/day36.py) |
 | **37** | Conversation Memory | Maintain a 3-turn chat history using Buffer Memory | ✅ | [Code](./day37/day37.py) |
-| **38** | RAG Setup | Index a text file into a Vector Store (Document Indexing) | ⬜ | |
+| **38** | RAG Setup | Index a text file into a Vector Store (Document Indexing) | ✅ | [Code](./day38/day38.py) |
 | **39** | Retrieval Query | Perform a similarity search on indexed docs | ⬜ | |
 | **40** | Embeddings | Embed and compare two texts using pre-built models | ⬜ | |
 | **41** | Prompt Tuning | Improve output using Few-Shot examples | ⬜ | |
@@ -128,13 +128,14 @@ The challenge is divided into 7 key phases:
 * **Day 35 -** Transitioned from "AI that talks" to "**AI that acts**" by implementing **Custom Tools (Function Calling)**. I learned that a Tool is essentially a Python function wrapped in a `@tool` decorator, where the docstring serves as the instruction manual for the LLM. I mastered the **Execution Round-Trip** - The AI identifies a need, generates a structured tool call, the system executes the Python logic and the result is fed back via a `ToolMessage`. This architecture allows the agent to delegate precise tasks to deterministic code, eliminating LLM hallucinations in technical domains.
 * **Day 36 -** Built an autonomous **ReAct Agent**. I transitioned from manual orchestration (where the developer writes the if/else logic for tool calls) to autonomous reasoning, where the LLM determines the execution path based on a provided toolkit. I learned how to implement a stateful **Reason -> Act -> Observe** loop, enabling the agent to solve multi-step problems (like calculating character counts and performing sequential math) by maintaining a scratchpad of its own thoughts and tool observations.
 * **Day 37 -** Implemented **Conversation Memory** using LangChain's modern RunnableWithMessageHistory. LLMs are inherently stateless and that AI memory is actually achieved by dynamically injecting previous interaction history into the prompt's context window. By leveraging `InMemoryChatMessageHistory` and `session_id` management, unlocked capability of recalling user details across multiple turns, officially transitioning from single-shot tasks to stateful, continuous dialogues.
+* **Day 38 -** Built a complete Document Indexing pipeline. LLMs can’t efficiently process massive files in a single prompt, so implemented an ETL workflow to Load raw text, Split it into semantic chunks using `RecursiveCharacterTextSplitter`, and transform those chunks into high-dimensional mathematical vectors (Embeddings) using Google's `gemini-embedding-001`. By storing these in a local FAISS Vector Database, enabled the agent to perform Semantic Search, retrieving information based on meaning rather than just keyword matching.
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic`, `langchain-google-genai` (so far)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic`, `langchain-google-genai`, `langchain-community`, `langchain-text-splitters`, `faiss-cpu` (so far)
 * **Frameworks -** Flask, LangChain, AutoGen(Upcoming), LangGraph(Upcoming)
 
 ## 🏃‍♂️ How to Run
@@ -186,6 +187,7 @@ The challenge is divided into 7 key phases:
     | **35** | [Code](./day35/README.md) |
     | **36** | [Code](./day36/README.md) |
     | **37** | [Code](./day37/README.md) |
+    | **38** | [Code](./day38/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
