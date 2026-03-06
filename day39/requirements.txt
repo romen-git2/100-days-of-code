@@ -1,0 +1,6 @@
+python-dotenv
+langchain-google-genai
+langchain-community
+langchain
+langchain-core
+faiss-cpu
