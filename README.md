@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-41%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-42%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -77,7 +77,7 @@ The challenge is divided into 7 key phases:
 | **39** | Retrieval Query | Perform a similarity search on indexed docs | ✅ | [Code](./day39/day39.py) |
 | **40** | Embeddings | Embed and compare two texts using pre-built models | ✅ | [Code](./day40/day40.py) |
 | **41** | Prompt Tuning | Improve output using Few-Shot examples | ✅ | [Code](./day41/day41.py) |
-| **42** | Sequential Workflows | Build a 3-step runnable workflow using LCEL | ⬜ | |
+| **42** | Sequential Workflows | Build a 3-step runnable workflow using LCEL | ✅ | [Code](./day42/day42.py) |
 | **43** | Simple Agents | Build 3 variants: Zero-shot, Tool-using, and Memory agent | ⬜ | |
 | **44** | Chain Tracing | Trace a chain execution using LangSmith basics | ⬜ | |
 | **45** | Basic Assistant | Deploy a local Q&A assistant script | ⬜ | |
@@ -132,6 +132,7 @@ The challenge is divided into 7 key phases:
 * **Day 39 -** Completed the **Retrieval-Augmented Generation (RAG)** loop by implementing the Execution phase. Learned how to ground an LLM in a custom knowledge base by performing a similarity search on a local FAISS index and injecting the retrieved chunks into a restricted system prompt. The key takeaway was realizing how `temperature=0` and explicit context instructions act as a primary defense against AI hallucinations in production-grade RAG systems.
 * **Day 40 -** Demystified the black box of Vector Databases by manually working with **Embeddings and Cosine Similarity**. Embedding models convert text into massive, high-dimensional float arrays (specifically, 3072 dimensions), mapping concepts into a geometric space. By using `numpy` to manually calculate the angle between vectors, semantically identical sentences with zero keyword overlap (e.g., "reset password" vs. "recover credentials") score a high `0.71` similarity, compared to `0.51` for unrelated text. This geometric relationship is the absolute mathematical foundation of semantic search and RAG.
 * **Day 41 -** Used **Few-Shot Prompting** to dynamically control LLM output formatting. Used the "Show, Don't Tell" principle of Prompt Engineering. Instead of writing overly complex System Prompts (Zero-Shot) hoping the model formats data correctly, used LangChain's `FewShotChatMessagePromptTemplate` to inject 3 examples of optimal input/output pairs directly into the prompt as simulated chat history. This leverages In-Context Learning, forcing the AI to perfectly mimic a desired tone and structure (like explaining tech concepts using analogies) without the need for expensive model fine-tuning.
+* **Day 42 -** Built a 3-step Sequential Workflow (Topic -> Title -> Outline -> Tweet) using LangChain Expression Language (LCEL) and `RunnablePassthrough.assign()`. When chaining LLMs, Strict Prompting (e.g., "Return exactly one item. No conversational filler.") is mandatory to keep data clean as it moves down the assembly line.
 
 ---
 
@@ -194,6 +195,7 @@ The challenge is divided into 7 key phases:
     | **39** | [Code](./day39/README.md) |
     | **40** | [Code](./day40/README.md) |
     | **41** | [Code](./day41/README.md) |
+    | **42** | [Code](./day41/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
