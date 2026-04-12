@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-43%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-44%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -79,7 +79,7 @@ The challenge is divided into 7 key phases:
 | **41** | Prompt Tuning | Improve output using Few-Shot examples | ✅ | [Code](./day41/day41.py) |
 | **42** | Sequential Workflows | Build a 3-step runnable workflow using LCEL | ✅ | [Code](./day42/day42.py) |
 | **43** | Simple Agents | Build 3 variants: Zero-shot, Tool-using, and Memory agent | ✅ | [Code](./day43/day43.py) |
-| **44** | Chain Tracing | Trace a chain execution using LangSmith basics | ⬜ | |
+| **44** | Chain Tracing | Trace a chain execution using LangSmith basics | ✅ | [Code](./day44/day44.py) |
 | **45** | Basic Assistant | Deploy a local Q&A assistant script | ⬜ | |
 | **46** | AutoGen Agents | Create a single agent using AutoGen basic setup | ⬜ | |
 | **47** | Multi-turn Convo | Simulate a back-and-forth dialogue in AutoGen | ⬜ | |
@@ -134,6 +134,7 @@ The challenge is divided into 7 key phases:
 * **Day 41 -** Used **Few-Shot Prompting** to dynamically control LLM output formatting. Used the "Show, Don't Tell" principle of Prompt Engineering. Instead of writing overly complex System Prompts (Zero-Shot) hoping the model formats data correctly, used LangChain's `FewShotChatMessagePromptTemplate` to inject 3 examples of optimal input/output pairs directly into the prompt as simulated chat history. This leverages In-Context Learning, forcing the AI to perfectly mimic a desired tone and structure (like explaining tech concepts using analogies) without the need for expensive model fine-tuning.
 * **Day 42 -** Built a 3-step Sequential Workflow (Topic -> Title -> Outline -> Tweet) using LangChain Expression Language (LCEL) and `RunnablePassthrough.assign()`. When chaining LLMs, Strict Prompting (e.g., "Return exactly one item. No conversational filler.") is mandatory to keep data clean as it moves down the assembly line.
 * **Day 43 -** Built 3 Agent variants (Zero-shot, Tool-using and Memory) using LangChain `create_agent` factory. By defining external capabilities as `@tool` functions, the agent transitions from an isolated brain to a stateful system capable of **Anaphora Resolution** (resolving "the item I mentioned earlier" into "Gaming Laptop" by tracking message history).
+* **Day 44 -** Solved the LLM Black Box problem by implementing **Observability with LangSmith**. Debugging multi-step AI pipelines with `print()` statements is unscalable. By enabling `LANGCHAIN_TRACING_V2`, automatically captured the exact inputs, outputs, token consumption and latency of a multi-step LCEL workflow. This visual tracing is a mandatory architectural component for moving AI agents from experimental scripts to production-grade, debuggable software.
 
 ---
 
@@ -198,6 +199,7 @@ The challenge is divided into 7 key phases:
     | **41** | [Code](./day41/README.md) |
     | **42** | [Code](./day42/README.md) |
     | **43** | [Code](./day43/README.md) |
+    | **44** | [Code](./day44/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
