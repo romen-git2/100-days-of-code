@@ -1,0 +1,9 @@
+python-dotenv
+streamlit
+langchain-google-genai
+langchain-ollama
+Pillow
+pypdf
+python-docx
+fpdf2
+pdf2image
