@@ -1,6 +1,6 @@
 # 100 Days of Code - Building AI Agents
 
-![Progress](https://img.shields.io/badge/Progress-44%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
+![Progress](https://img.shields.io/badge/Progress-45%2F100-brightgreen) ![Python](https://img.shields.io/badge/Python-3.10%2B-blue) ![Focus](https://img.shields.io/badge/Focus-AI%20Agents-orange)
 
 This repository documents my journey through the **100 Days of Code** challenge, specifically focused on **Advanced Python, Agentic AI and Large Language Model (LLM) Orchestration**.
 
@@ -80,7 +80,7 @@ The challenge is divided into 7 key phases:
 | **42** | Sequential Workflows | Build a 3-step runnable workflow using LCEL | ✅ | [Code](./day42/day42.py) |
 | **43** | Simple Agents | Build 3 variants: Zero-shot, Tool-using, and Memory agent | ✅ | [Code](./day43/day43.py) |
 | **44** | Chain Tracing | Trace a chain execution using LangSmith basics | ✅ | [Code](./day44/day44.py) |
-| **45** | Basic Assistant | Deploy a local Q&A assistant script | ⬜ | |
+| **45** | Basic Assistant | Deploy a local Q&A assistant script | ✅ | [Code](./day45/day45.py) |
 | **46** | AutoGen Agents | Create a single agent using AutoGen basic setup | ⬜ | |
 | **47** | Multi-turn Convo | Simulate a back-and-forth dialogue in AutoGen | ⬜ | |
 | **48** | Group Chat | Coordinate a simple task between 2 agents | ⬜ | |
@@ -135,13 +135,14 @@ The challenge is divided into 7 key phases:
 * **Day 42 -** Built a 3-step Sequential Workflow (Topic -> Title -> Outline -> Tweet) using LangChain Expression Language (LCEL) and `RunnablePassthrough.assign()`. When chaining LLMs, Strict Prompting (e.g., "Return exactly one item. No conversational filler.") is mandatory to keep data clean as it moves down the assembly line.
 * **Day 43 -** Built 3 Agent variants (Zero-shot, Tool-using and Memory) using LangChain `create_agent` factory. By defining external capabilities as `@tool` functions, the agent transitions from an isolated brain to a stateful system capable of **Anaphora Resolution** (resolving "the item I mentioned earlier" into "Gaming Laptop" by tracking message history).
 * **Day 44 -** Solved the LLM Black Box problem by implementing **Observability with LangSmith**. Debugging multi-step AI pipelines with `print()` statements is unscalable. By enabling `LANGCHAIN_TRACING_V2`, automatically captured the exact inputs, outputs, token consumption and latency of a multi-step LCEL workflow. This visual tracing is a mandatory architectural component for moving AI agents from experimental scripts to production-grade, debuggable software.
+* **Day 45 -** Built **ContractGuard Pro**, a Streamlit application utilizing a **Hybrid Edge-Cloud AI Architecture**. Implemented a Privacy Shield using `LangChain Ollama` (`gemma3:270m` and `moondream`) to scrub Personally Identifiable Information (PII) from PDFs and images entirely locally. Once anonymized, the sanitized text is sent to the Cloud (`gemini`) for complex legal reasoning. Solidified understanding of routing workloads between Edge AI (for privacy) and Cloud AI (for intelligence).
 
 ---
 
 ## 💻 Tech Stack
 
 * **Languages -** Python
-* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic`, `langchain-google-genai`, `langchain-community`, `langchain-text-splitters`, `faiss-cpu`, `langchain-core` (so far)
+* **Libraries -** `asyncio`, `pandas`, `numpy`, `aiohttp`, `matplotlib`, `beautifulsoup4`, `requests`, `dask`, `pytest`, `python-dotenv`, `pymongo`, `redis`, `pika`, `pydantic`, `langchain-google-genai`, `langchain-community`, `langchain-text-splitters`, `faiss-cpu`, `langchain-core`, `streamlit`, `langchain-ollama`, `Pillow`, `pypdf`, `python-docx`, `fpdf2`, `pdf2image`(so far)
 * **Frameworks -** Flask, LangChain, AutoGen(Upcoming), LangGraph(Upcoming)
 
 ## 🏃‍♂️ How to Run
@@ -200,6 +201,7 @@ The challenge is divided into 7 key phases:
     | **42** | [Code](./day42/README.md) |
     | **43** | [Code](./day43/README.md) |
     | **44** | [Code](./day44/README.md) |
+    | **45** | [Code](./day45/README.md) |
 
 ---
 *Connect with me on [LinkedIn](https://www.linkedin.com/in/romen-ranasingha) to follow my daily updates!*
